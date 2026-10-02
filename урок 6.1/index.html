@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+<div class="container">
+     <h2>События клавиатуры</h2> 
+     <p>Кликни в поле ниже и нажми любую клавишу (букву или системную):</p> 
+     <input type="text" class="key-input" id="keyInput" placeholder="Нажимай сюда...">
+     <div class="info-box"> 
+         <div>Клавиша (event.key): <span id="keyName" class="highlight">-</span></div> 
+         <div>Код (event.code): <span id="keyCode" class="highlight">-</span></div> 
+         <div style="margin-top: 15px; border-top: 1px solid #444; padding-top: 10px;"> 
+             <strong>Активные системные клавиши:</strong> 
+             <div style="margin-top: 8px;"> 
+                 <span id="badgeCtrl" class="sys-badge">Ctrl</span> 
+                 <span id="badgeShift" class="sys-badge">Shift</span> 
+                 <span id="badgeAlt" class="sys-badge">Alt</span> 
+             </div> 
+         </div> 
+     </div> 
+</div>
+<script src="index.js"></script>
+</body>
+</html>
