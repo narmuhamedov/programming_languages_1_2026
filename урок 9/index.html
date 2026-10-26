@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сотовые телефоны</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <h1>Телефоны</h1>
+            <p>JSON</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="list-section">
+            <h2>Наши товары</h2>
+            <div id="product-grid" class="grid"></div>
+        </section>
+
+        <section id="detail-section" class="modal hidden">
+            <div class="modal-content">
+                <span id="close-btn" class="close">&times;</span>
+                <div id="detail-card"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+[
+    
+    {
+        "id":1,
+        "name": "Телефон 1",
+        "price": 20000,
+        "image": "images/tel1.jpg",
+        "description": "Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+        "specs": {
+            "Экран": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Процессор": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Память": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Аккумулятор": "5999MAH"
+        }
+    },
+
+     
+    {
+        "id":2,
+        "name": "Телефон 2",
+        "price": 30000,
+        "image": "images/tel2.webp",
+        "description": "Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+        "specs": {
+            "Экран": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Процессор": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Память": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Аккумулятор": "5999MAH"
+        }
+    },
+
+
+     
+    {
+        "id":3,
+        "name": "Телефон 3",
+        "price": 12345,
+        "image": "images/tel3.jpg",
+        "description": "Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+        "specs": {
+            "Экран": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Процессор": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Память": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Аккумулятор": "5999MAH"
+        }
+    },
+
+
+     
+    {
+        "id":4,
+        "name": "Телефон 4",
+        "price": 234432,
+        "image": "images/tel4.jpg",
+        "description": "Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+        "specs": {
+            "Экран": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Процессор": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Память": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Аккумулятор": "5999MAH"
+        }
+    },
+
+
+     
+    {
+        "id":5,
+        "name": "Телефон 5",
+        "price": 888,
+        "image": "images/tel5.jfif",
+        "description": "Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+        "specs": {
+            "Экран": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Процессор": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Память": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "Аккумулятор": "5999MAH"
+        }
+    }
+
+
+
+]
