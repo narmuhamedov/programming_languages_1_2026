@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+form {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+input, textarea {          /* ✅ запятая */
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.post-item {               /* ✅ дефис, как в JS */
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+button {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#cancelBtn {
+    display: none;
+}

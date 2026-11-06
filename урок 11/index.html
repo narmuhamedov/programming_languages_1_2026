@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD + JSONPlaceholder</title>
+    <link rel="stylesheet" href="style.css">   <!-- ✅ CSS, не JS -->
+</head>
+<body>
+
+    <h1>CRUD операции + JSON &amp; Memory Storage</h1>
+
+    <form id="postForm">
+        <input type="hidden" id="postId">        <!-- ✅ postId, как в JS -->
+        <input type="text" id="postTitle" placeholder="Заголовок поста" required>
+        <textarea id="postBody" placeholder="Текст поста" required></textarea>
+        <button type="submit" id="submitBtn">Создать</button>
+        <button type="button" id="cancelBtn">Отмена</button>
+    </form>
+
+    <div id="postsContainer">                    <!-- ✅ postsContainer, как в JS -->
+        Загрузка постов....
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
