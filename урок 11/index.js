@@ -1,5 +1,6 @@
 const API_URL = 'https://jsonplaceholder.typicode.com/posts';
 
+
 const postForm = document.getElementById('postForm');
 const postIdInput = document.getElementById('postId');
 const postTitleInput = document.getElementById('postTitle');
@@ -8,7 +9,40 @@ const submitBtn = document.getElementById('submitBtn');
 const cancelBtn = document.getElementById('cancelBtn');
 const postsContainer = document.getElementById('postsContainer');
 
+const resetStorageBtn = document.getElementById('resetStorageBtn');
+let resetTimer = null;
+
+async function resetToDefault() {
+    clearTimeout(resetTimer);
+    localStorage.removeItem(STORAGE_KEY);
+    await fetchPosts();
+    alert('Все вернулось по умолчанию!')
+}
+
+function sheduleAutoReset(){
+    clearTimeout(resetTimer);
+    resetTimer = setTimeout(()=>{
+        resetToDefault();
+    }, 100000000);
+}
+
+resetStorageBtn.addEventListener('click', ()=>{
+    if (confirm('Вернуть по умолчанию')) {
+        resetToDefault();
+    }
+});
+
+
+const STORAGE_KEY = 'saved_posts'
 let localPosts = [];
+
+function saveToStorage(){
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(localPosts));
+}
+
+
+
+
 
 // Экранирование HTML для защиты от XSS
 function escapeHtml(str) {
@@ -22,6 +56,16 @@ function escapeHtml(str) {
 
 // READ
 async function fetchPosts() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+
+    if (saved){
+        localPosts = JSON.parse(saved);
+        renderPosts();
+        sheduleAutoReset();
+        return;
+    }
+
+
     try {
         const response = await fetch(`${API_URL}?_limit=5`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -91,7 +135,9 @@ postForm.addEventListener('submit', async (e) => {
             localPosts = localPosts.map(p =>
                 p.id === Number(id) ? updatedPost : p
             );
+            saveToStorage();
             resetForm();
+            sheduleAutoReset();
             renderPosts();
             alert(`Пост с ID ${id} успешно обновлён`);
         } catch (error) {
@@ -115,7 +161,9 @@ postForm.addEventListener('submit', async (e) => {
                 : 1;
 
             localPosts.unshift(newPost);
+            saveToStorage();
             resetForm();
+            sheduleAutoReset();
             renderPosts();
             alert('Пост успешно добавлен');
         } catch (error) {
@@ -151,6 +199,8 @@ async function deletePost(id) {
 
         localPosts = localPosts.filter(p => p.id !== id);
         renderPosts();
+        sheduleAutoReset();
+        saveToStorage();
         alert(`Пост с ID ${id} успешно удалён`);
     } catch (error) {
         console.error('Ошибка при удалении:', error);
